@@ -85,14 +85,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Progamming-Learning/">Progamming Learning</a><span class="tag-list-count">1</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Programming/">Java Programming</a><span class="tag-list-count">2</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">1</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">2</span></li></ul>
               </li>
             
           
@@ -149,6 +149,45 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
+        <a href="/2017/02/05/Java-Read-and-Write-files/" >
+  Java Read and Write files
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/02/05/Java-Read-and-Write-files/"><span class="article-date">
+  2017-02-05
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Programming/">Java Programming</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>It’s pretty forgettable about the I/O in Java.<br>For now list some common ways for reminder. TODO: go over the book.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*reading a file by using stream I/O*/</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</div><div class="line">	String filePath = <span class="string">"..."</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">	<span class="comment">/*read the input text file*/</span></div><div class="line">	File file = <span class="keyword">new</span> File(filePath);</div><div class="line">	<span class="comment">/*build a input stream reader*/</span></div><div class="line">	InputStreamReader reader = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file));</div><div class="line">	BufferedReader br = <span class="keyword">new</span> BufferedReader(reader);</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	line = br.readLine();</div><div class="line">	<span class="comment">/*read by line*/</span></div><div class="line">		<span class="keyword">while</span>(line != <span class="keyword">null</span>)&#123;</div><div class="line">			line = br.readLine();</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">/*write text file*/</span></div><div class="line">	File writename = <span class="keyword">new</span> File(<span class="string">".\\result\\en\\output.txt"</span>); <span class="comment">//build a file if not already exits</span></div><div class="line">        writename.createNewFile(); <span class="comment">// create new file </span></div><div class="line">        BufferedWriter out = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(writename));  </div><div class="line">         </div><div class="line">        out.write(<span class="string">"i AM WRITING OUT\r\n"</span>); <span class="comment">// \r\n </span></div><div class="line">        out.flush(); <span class="comment">// put the buffered content into the file</span></div><div class="line">        out.close(); <span class="comment">// close the file at the end</span></div><div class="line">  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line">            e.printStackTrace();  </div><div class="line">        &#125;  </div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Reference:<br><a href="http://blog.csdn.net/monkeyduck/article/details/11525771" target="_blank" rel="external">http://blog.csdn.net/monkeyduck/article/details/11525771</a></p>
+
+        
+      </div>
+    </div>
+
+  
+
+  
+  
+    
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
         <a href="/2017/02/04/JSON-used-in-Java/" >
   JSON used in Java
 </a>
@@ -165,7 +204,7 @@
 
         
 	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Progamming-Learning/">Progamming Learning</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Programming/">Java Programming</a></li></ul>
 	</span>
 
 
