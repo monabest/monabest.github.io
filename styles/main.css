@@ -621,7 +621,7 @@ body {
 .article-entry .highlight {
   background: #fff;
   margin: 0 -20px;
-  padding: 7px 20px;
+  padding: 15px 20px;
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
@@ -640,18 +640,14 @@ body {
   font-family: "新宋", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
-  background: #e3e3e3;
-  color: #666;
-  border-radius: 3px;
-  border-width: 1px;
-  border-color: #fff;
+  background: color-background;
   text-shadow: 0 1px #fff;
-  padding: 0.1em 0.1em;
+  padding: 0.1em 0.3em;
 }
 .article-entry pre code {
-  background: #e3e3e3;
+  background: none;
   text-shadow: none;
-  padding: 0.1em 0.1em;
+  padding: 0;
 }
 .article-entry .highlight pre {
   border: none;
