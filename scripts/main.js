@@ -1,9 +1,6 @@
 (function() {
   'use strict';
 
-  // hide scrollbar
-  Ps.initialize($('.sidebar')[0]);
-
   $('.category-list-container > a, .tag-list-container > a, .archive-list-container > a').click(function(e){
     $(this).next().slideToggle('fast');
   });
@@ -241,6 +238,7 @@
             item.h = img.naturalHeight;
             gallery.invalidateCurrItems();
             gallery.updateSize(true);
+            console.log(item);
           }
         });
 

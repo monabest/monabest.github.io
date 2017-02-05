@@ -212,12 +212,9 @@ body {
   left: 400px;
   bottom: 0;
   height: 100%;
-  padding: 20px 40px 0;
+  padding: 20px 40px;
   overflow: auto;
   word-wrap: break-word;
-}
-.main-footer {
-  padding: 20px 0;
 }
 @media screen and (max-width: 768px) {
   .main-container {
@@ -244,7 +241,7 @@ body {
   bottom: 0;
   width: 400px;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   background-color: #333;
   color: #fff;
   text-align: right;
@@ -428,7 +425,6 @@ body {
 .article .article-info {
   font-size: 14px;
   color: #808080;
-  margin-bottom: 1em;
 }
 .article .article-info .article-date {
   margin-right: 0.5em;
@@ -460,11 +456,6 @@ body {
 .article .article-entry {
   font-size: 16px;
   line-height: 1.6em;
-  text-align: justify;
-}
-.article .article-entry code {
-  background-color: #f1f1f1;
-  border-radius: 2px;
 }
 .article .article-entry blockquote {
   background: #f9f9f9;
@@ -870,10 +861,4 @@ pre .javascript .function {
 }
 .jiathis_style > div {
   border: none !important;
-}
-.main-content .jiathis_style_32x32 .jtico {
-  display: inline-block !important;
-}
-.jiathis_style .ckepopBottom {
-  padding: 5px;
 }
