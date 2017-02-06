@@ -8,16 +8,29 @@
 
 <title>
   
-    Tag: Java Programming
+    Reading -Effective Java
   
 </title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="MonaBest-Blogggyyy">
-<meta property="og:url" content="http://yoursite.com/tags/Java-Programming/index.html">
+<meta name="description" content="Effective JavaChapter 1make effective use of  java.util, java.util.concurrent, java.iomodule refers to any reusable software component
+
+
+Interfaces (including annota- tions), classes (including enums)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reading -Effective Java">
+<meta property="og:url" content="http://yoursite.com/2017/02/05/Reading-Effective-Java/index.html">
 <meta property="og:site_name" content="MonaBest-Blogggyyy">
+<meta property="og:description" content="Effective JavaChapter 1make effective use of  java.util, java.util.concurrent, java.iomodule refers to any reusable software component
+
+
+Interfaces (including annota- tions), classes (including enums)">
+<meta property="og:updated_time" content="2017-02-06T02:39:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MonaBest-Blogggyyy">
+<meta name="twitter:title" content="Reading -Effective Java">
+<meta name="twitter:description" content="Effective JavaChapter 1make effective use of  java.util, java.util.concurrent, java.iomodule refers to any reusable software component
+
+
+Interfaces (including annota- tions), classes (including enums)">
 
 
   <link rel="alternative" href="/atom.xml" title="MonaBest-Blogggyyy" type="application/atom+xml">
@@ -132,40 +145,30 @@
       
         <div style="max-width: 2300px">
       
-          <h1>Java Programming</h1>
-
-
+          <article id="post-Reading-Effective-Java" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Reading -Effective Java
+    </h1>
   
   
-    <div class="post-list">
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2017/02/05/Reading-Effective-Java/" >
-  Reading -Effective Java
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2017/02/05/Reading-Effective-Java/"><span class="article-date">
+  <div class="article-info">
+    <span class="article-date">
   2017-02-05
 </span>
-</a>
-        
 
-        
+    
+
+    
 	<span class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Programming/">Java Programming</a></li></ul>
 	</span>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="Effective-Java"><a href="#Effective-Java" class="headerlink" title="Effective Java"></a>Effective Java</h1><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>make effective use of  <code>java.util, java.util.concurrent, java.io</code><br>module refers to any reusable software component</p>
+  </div>
+  <div class="article-entry">
+    <h1 id="Effective-Java"><a href="#Effective-Java" class="headerlink" title="Effective Java"></a>Effective Java</h1><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>make effective use of  <code>java.util, java.util.concurrent, java.io</code><br>module refers to any reusable software component</p>
 <blockquote>
 <ul>
 <li>Interfaces (including annota- tions), classes (including enums), array are reference types</li>
@@ -225,118 +228,29 @@
 <p>It guarantees that the class will never be instantiated under any circumstances. This idiom also prevents the class from being subclassed. All constructors must invoke a superclass constructor, explicitly or implicitly, and a subclass would have no accessible superclass constructor to invoke.</p>
 <h4 id="Item5-Avoid-creating-unnecessary-objects"><a href="#Item5-Avoid-creating-unnecessary-objects" class="headerlink" title="Item5: Avoid creating unnecessary objects"></a>Item5: Avoid creating unnecessary objects</h4><p>String s = new String(“stringette”); // DON’T DO THIS!<br>“stringette” is itself a string instance. If this use occurs in a loop or in a frequently invoked method, many string instances will be created needlessly.So just simply<br>String s = “stringette”;<br>This uses a single string instance rather than creating a new one each time.</p>
 <h4 id="Item6"><a href="#Item6" class="headerlink" title="Item6:"></a>Item6:</h4><h2 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h2><h2 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h2>
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2017/02/05/Java-Read-and-Write-files/" >
-  Java Read and Write files
-</a>
-
-      </h3>
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.E" target="_blank" title="Attribution-ShareAlike">
+      <img src="/images/cc/cc.png">
       
-
-      <div class="article-info">
-        <a href="/2017/02/05/Java-Read-and-Write-files/"><span class="article-date">
-  2017-02-05
-</span>
-</a>
+          <img src="/images/cc/by.png">
         
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Programming/">Java Programming</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <p>It’s pretty forgettable about the I/O in Java.<br>For now list some common ways for reminder. TODO: go over the book.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*reading a file by using stream I/O*/</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</div><div class="line">	String filePath = <span class="string">"..."</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">	<span class="comment">/*read the input text file*/</span></div><div class="line">	File file = <span class="keyword">new</span> File(filePath);</div><div class="line">	<span class="comment">/*build a input stream reader*/</span></div><div class="line">	InputStreamReader reader = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file));</div><div class="line">	BufferedReader br = <span class="keyword">new</span> BufferedReader(reader);</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	line = br.readLine();</div><div class="line">	<span class="comment">/*read by line*/</span></div><div class="line">		<span class="keyword">while</span>(line != <span class="keyword">null</span>)&#123;</div><div class="line">			line = br.readLine();</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">/*write text file*/</span></div><div class="line">	File writename = <span class="keyword">new</span> File(<span class="string">".\\result\\en\\output.txt"</span>); <span class="comment">//build a file if not already exits</span></div><div class="line">        writename.createNewFile(); <span class="comment">// create new file </span></div><div class="line">        BufferedWriter out = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(writename));  </div><div class="line">         </div><div class="line">        out.write(<span class="string">"i AM WRITING OUT\r\n"</span>); <span class="comment">// \r\n </span></div><div class="line">        out.flush(); <span class="comment">// put the buffered content into the file</span></div><div class="line">        out.close(); <span class="comment">// close the file at the end</span></div><div class="line">  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line">            e.printStackTrace();  </div><div class="line">        &#125;  </div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Reference:<br><a href="http://blog.csdn.net/monkeyduck/article/details/11525771" target="_blank" rel="external">http://blog.csdn.net/monkeyduck/article/details/11525771</a><br><a href="http://www.cnblogs.com/0201zcr/p/5009975.html" target="_blank" rel="external">http://www.cnblogs.com/0201zcr/p/5009975.html</a><br><a href="http://blog.csdn.net/makeitperfect/article/details/9094613" target="_blank" rel="external">http://blog.csdn.net/makeitperfect/article/details/9094613</a></p>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
-
-  
-  
-    <div class="post-list">
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2017/02/04/JSON-used-in-Java/" >
-  JSON used in Java
-</a>
-
-      </h3>
+          <img src="/images/cc/sa.png">
       
-
-      <div class="article-info">
-        <a href="/2017/02/04/JSON-used-in-Java/"><span class="article-date">
-  2017-02-04
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Programming/">Java Programming</a></li></ul>
-	</span>
+      <span>
+        This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+      </span>
+    </a>
+  </div>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <p>download <a href="http://www.java2s.com/Code/Jar/j/Downloadjsonsimple111jar.htm" target="_blank" rel="external">jason-simple-1.1.1. jar</a><br>To deploy the Java library in Eclipse.<br>right click project - build path - add external archives - choose the jar to import.<br>JSON object is like java.util.Map<br>JSON array is like java.util.List</p>
-<p>A JSON object is an unordered set of key/value pairs.<br>A JSON array is an ordered collection of values. The values could be objects or arrays.</p>
-<p>Build an object form String, and retrieves by providing keys.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"&#123; \"name\": \"Alice\", \"age\": 20 &#125;"</span>;</div><div class="line">JSONObject obj = <span class="keyword">new</span> JSONObject(str);   <span class="comment">//save as new object</span></div><div class="line">String n = obj.getString(<span class="string">"name"</span>);</div><div class="line"><span class="keyword">int</span> a = obj.getInt(<span class="string">"age"</span>);</div><div class="line">System.out.println(n + <span class="string">" "</span> + a);  <span class="comment">// prints "Alice 20"</span></div></pre></td></tr></table></figure></p>
-<p>Build an object from array, and retrieves its array value by using     JSONArray.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"&#123; \"number\": [3, 4, 5, 6] &#125;"</span>;</div><div class="line">JSONObject obj = <span class="keyword">new</span> JSONObject(str);</div><div class="line">JSONArray arr = obj.getJSONArray(<span class="string">"number"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length(); i++)</div><div class="line">    System.out.println(arr.getInt(i));</div></pre></td></tr></table></figure></p>
-<p>Input file organized like this.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"id"</span>: <span class="number">1</span>,</div><div class="line">  <span class="string">"firstname"</span>: <span class="string">"Katerina"</span>,</div><div class="line">  <span class="string">"languages"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="string">"lang"</span>: <span class="string">"en"</span>,</div><div class="line">      <span class="string">"knowledge"</span>: <span class="string">"proficient"</span></div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="string">"lang"</span>: <span class="string">"fr"</span>,</div><div class="line">      <span class="string">"knowledge"</span>: <span class="string">"advanced"</span></div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  <span class="string">"job"</span>: &#123;</div><div class="line">    <span class="string">"site"</span>: <span class="string">"www.javacodegeeks.com"</span>,</div><div class="line">    <span class="string">"name"</span>: <span class="string">"Java Code Geeks"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Decode String<br>Read file from the given file path, and then build JSONObject to get the value.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public static void main(Strig args)&#123;</div><div class="line">	String filePath = "....";</div><div class="line">	try&#123;</div><div class="line">		FileReader reader = new FileReader(filePath); //read a file</div><div class="line"></div><div class="line">		JSONParser jsonparser = new JSONParser();</div><div class="line">		JSONObject obj = (JSONObject) jsonParser.parse(reader); //need to cast</div><div class="line">		String firstName = (String)jsonObject.get("firstName);</div><div class="line">		long id = (long)jsonObject.get("id");</div><div class="line">		//then could use loop to get each language JSONObject in array</div><div class="line">		JSONArray lang = (JSONArray)jsonObject.get("languages"); </div><div class="line">		Iterator i = lang.iterator;</div><div class="line">		while (i.hasNext()) &#123;</div><div class="line">                JSONObject innerObj = (JSONObject) i.next();</div><div class="line">                System.out.println("language "+ innerObj.get("lang") +</div><div class="line">                        " with level " + innerObj.get("knowledge"));</div><div class="line">            &#125;</div><div class="line">            // handle a structure into the json object</div><div class="line">            JSONObject structure = (JSONObject) jsonObject.get("job");</div><div class="line">            System.out.println("Into job structure, name: " + structure.get("name"));</div><div class="line">	&#125;</div><div class="line">	catch (FileNotFoundException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125; catch (IOException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125; catch (ParseException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125; catch (NullPointerException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>Encode into String</p>
-<pre><code class="Java"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>
-    </span>{
-        JSONObject obj = <span class="keyword">new</span> JSONObject();
+    
 
-        obj.put(<span class="string">"name"</span>,<span class="string">"foo"</span>);
-        obj.put(<span class="string">"num"</span>,<span class="keyword">new</span> Integer(<span class="number">100</span>));
-        obj.put(<span class="string">"balance"</span>,<span class="keyword">new</span> Double(<span class="number">1000.21</span>));
-        obj.put(<span class="string">"is_vip"</span>,<span class="keyword">new</span> Boolean(<span class="keyword">true</span>));
+  </footer>
+</article>
 
-        StringWriter out = <span class="keyword">new</span> StringWriter();
-        obj.writeJSONString(out);
-        String jsonText = out.toString();
-        System.out.print(jsonText);
-    }
-</code></pre>
-<p>Will show as {“balance”: 1000.21, “num”:100, “is_vip”:true, “name”:”foo”}</p>
-<p>Reference:<br><a href="http://theoryapp.com/parse-json-in-java/" target="_blank" rel="external">http://theoryapp.com/parse-json-in-java/</a><br><a href="https://examples.javacodegeeks.com/core-java/json/java-json-parser-example/" target="_blank" rel="external">https://examples.javacodegeeks.com/core-java/json/java-json-parser-example/</a><br><a href="http://wiki.jikexueyuan.com/project/json/with-java.html" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/json/with-java.html</a></p>
-
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
 
 
 
