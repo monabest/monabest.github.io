@@ -85,14 +85,14 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">Tag</a>
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Programming/">Java Programming</a><span class="tag-list-count">3</span></li></ul>
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Programming/">Java Programming</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/System-Design/">System Design</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
             
               <li class="archive-list-container">
                 <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">3</span></li></ul>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">4</span></li></ul>
               </li>
             
           
@@ -133,6 +133,78 @@
         <div style="max-width: 2300px">
       
           
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/02/13/What-happends-when-you-nevigate-to-a-URL/" >
+  What happends when you nevigate to a URL
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/02/13/What-happends-when-you-nevigate-to-a-URL/"><span class="article-date">
+  2017-02-13
+</span>
+</a>
+        
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System-Design/">System Design</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h3 id="what-happens-when-you-nevigate-to-a-URL"><a href="#what-happens-when-you-nevigate-to-a-URL" class="headerlink" title="what happens when you nevigate to a URL"></a>what happens when you nevigate to a URL</h3><h4 id="1-enter-a-URL-into-the-browser"><a href="#1-enter-a-URL-into-the-browser" class="headerlink" title="1. enter a URL into the browser"></a>1. enter a URL into the browser</h4><h4 id="2-browser-looks-up-the-IP-address-for-the-domain-name"><a href="#2-browser-looks-up-the-IP-address-for-the-domain-name" class="headerlink" title="2. browser looks up the IP address for the domain name"></a>2. browser looks up the IP address for the domain name</h4><blockquote>
+<ul>
+<li>The browser caches DNS records for some time. </li>
+<li>OS cache, if the browser cache does not contain the desired record, the browser makes a system call. Os has its own cache.</li>
+<li>Router cache</li>
+<li>IPS DNS cache</li>
+<li>Recursive search</li>
+</ul>
+</blockquote>
+<h4 id="3-The-browser-send-a-HTTP-to-the-web-server"><a href="#3-The-browser-send-a-HTTP-to-the-web-server" class="headerlink" title="3. The browser send a HTTP to the web server."></a>3. The browser send a HTTP to the web server.</h4><p>  Be sure that FB’s homepage will not be served from the browser cache because dynamic pages expire either every quickly or immediately</p>
+<blockquote>
+<p>GET <a href="http://facebook.com/" target="_blank" rel="external">http://facebook.com/</a> HTTP/1.1 Accept:<br>application/x-ms-application, image/jpeg, application/xaml+xml, […]<br>User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64;<br>[…] Accept-Encoding: gzip, deflate Connection: Keep-Alive Host:<br>facebook.com Cookie: datr=1265876274-[…]; locale=en_US; lsd=WW[…];<br>c_user=2101[…]</p>
+</blockquote>
+<p>GET request names the URL to fetch “<a href="http://facebook.com/" target="_blank" rel="external">http://facebook.com/</a>“. The brower identifies itself(User Agent header), and states what types of responses it will accept(Accept and Accept- Encoding headers). The connection header asks the server to keep the TCP connection open for further requests.<br>The request also contains the cookies that the browser has for this domain. As you probably already know, cookies are key-value pairs that track the state of a web site in between different page requests. And so the cookies store the name of the logged-in user, a secret number that was assigned to the user by the server, some of user’s settings, etc. The cookies will be stored in a text file on the client, and sent to the server with every request.</p>
+<blockquote>
+<p>In addition to GET requests, another type of requests that you may be<br>familiar with is a POST request, typically used to submit forms. A GET<br>request sends its parameters via the URL (e.g.:<br><a href="http://robozzle.com/puzzle.aspx?id=85" target="_blank" rel="external">http://robozzle.com/puzzle.aspx?id=85</a>). A POST request sends its<br>parameters in the request body, just under the headers.</p>
+</blockquote>
+<p>.</p>
+<blockquote>
+<p>The trailing slash in the URL “<a href="http://facebook.com/”" target="_blank" rel="external">http://facebook.com/”</a> is important. In<br>this case, the browser can safely add the slash. For URLs of the form<br><a href="http://example.com/folderOrFile" target="_blank" rel="external">http://example.com/folderOrFile</a>, the browser cannot automatically add<br>a slash, because it is not clear whether folderOrFile is a folder or a<br>file. In such cases, the browser will visit the URL without the slash,<br>and the server will respond with a redirect, resulting in an<br>unnecessary roundtrip.</p>
+</blockquote>
+<h4 id="4-The-facebook-server-responds-with-a-permanent-redirect"><a href="#4-The-facebook-server-responds-with-a-permanent-redirect" class="headerlink" title="4. The facebook server responds with a permanent redirect"></a>4. The facebook server responds with a permanent redirect</h4><blockquote>
+<p>HTTP/1.1 301 Moved Permanently Cache-Control: private, no-store,<br>no-cache, must-revalidate, post-check=0,<br>      pre-check=0 Expires: Sat, 01 Jan 2000 00:00:00 GMT Location: <a href="http://www.facebook.com/" target="_blank" rel="external">http://www.facebook.com/</a> P3P: CP=”DSP LAW” Pragma: no-cache<br>Set-Cookie: made_write_conn=deleted; expires=Thu, 12-Feb-2009 05:09:50<br>GMT;<br>      path=/; domain=.facebook.com; httponly Content-Type: text/html; charset=utf-8 X-Cnection: close Date: Fri, 12 Feb 2010 05:09:51 GMT<br>Content-Length: 0</p>
+</blockquote>
+<p>Tell browser to redirect.<br>Reasons: 1. search engine rankings 2. multiple URLs for the same content are not cache- friendly. </p>
+<p>####5. The browser follows the redirect<br>The browser now knows the correct URL and sends out another GET request</p>
+<h4 id="6-The-server-handles-the-request"><a href="#6-The-server-handles-the-request" class="headerlink" title="6. The server handles the request"></a>6. The server handles the request</h4><p>web server software<br>request handler heandler</p>
+<h4 id="7-The-server-sends-back-a-HTMP-response"><a href="#7-The-server-sends-back-a-HTMP-response" class="headerlink" title="7. The server sends back a HTMP response"></a>7. The server sends back a HTMP response</h4><h4 id="8-The-browser-begins-rendering-the-HTML"><a href="#8-The-browser-begins-rendering-the-HTML" class="headerlink" title="8. The browser begins rendering the HTML"></a>8. The browser begins rendering the HTML</h4><h4 id="9-The-browser-sends-requests-for-objects-embedded-in-HTML"><a href="#9-The-browser-sends-requests-for-objects-embedded-in-HTML" class="headerlink" title="9. The browser sends requests for objects embedded in HTML."></a>9. The browser sends requests for objects embedded in HTML.</h4><p>As the browser renders the HTML, it will notice tags that require fetching of other URLs. The browser will send a GET request to retrieve each of these files.<br>Each of these URLs will go through process a similar to what the HTML page went through. So, the browser will look up the domain name in DNS, send a request to the URL, follow redirects, etc. However, static files – unlike dynamic pages – allow the browser to cache them. Some of the files may be served up from cache, without contacting the server at all. The browser knows how long to cache a particular file because the response that returned the file contained an Expires header. </p>
+<h4 id="10-The-browser-sends-further-synchronous-AJAX-requests"><a href="#10-The-browser-sends-further-synchronous-AJAX-requests" class="headerlink" title="10. The browser sends further synchronous(AJAX) requests."></a>10. The browser sends further synchronous(AJAX) requests.</h4><p>In the Facebook example, the client sends a POST request to <a href="http://www.facebook.com/ajax/chat/buddy_list.php" target="_blank" rel="external">http://www.facebook.com/ajax/chat/buddy_list.php</a> to fetch the list of your friends who are online.<br>This pattern is sometimes referred to as “AJAX”, which stands for “Asynchronous JavaScript And XML”</p>
+<blockquote>
+<p>Facebook chat provides an example of an interesting problem with AJAX:<br>pushing data from server to client. Since HTTP is a request-response<br>protocol, the chat server cannot push new messages to the client.<br>Instead, the client has to poll the server every few seconds to see if<br>any new messages arrived.</p>
+</blockquote>
+<p>Reference: <a href="http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url/" target="_blank" rel="external">http://igoro.com/archive/what-really-happens-when-you-navigate-to-a-url/</a></p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
   
   
@@ -345,27 +417,9 @@
         
           <p>download <a href="http://www.java2s.com/Code/Jar/j/Downloadjsonsimple111jar.htm" target="_blank" rel="external">jason-simple-1.1.1. jar</a><br>To deploy the Java library in Eclipse.<br>right click project - build path - add external archives - choose the jar to import.<br>JSON object is like java.util.Map<br>JSON array is like java.util.List</p>
 <p>A JSON object is an unordered set of key/value pairs.<br>A JSON array is an ordered collection of values. The values could be objects or arrays.</p>
-<p>Build an object form String, and retrieves by providing keys.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"&#123; \"name\": \"Alice\", \"age\": 20 &#125;"</span>;</div><div class="line">JSONObject obj = <span class="keyword">new</span> JSONObject(str);   <span class="comment">//save as new object</span></div><div class="line">String n = obj.getString(<span class="string">"name"</span>);</div><div class="line"><span class="keyword">int</span> a = obj.getInt(<span class="string">"age"</span>);</div><div class="line">System.out.println(n + <span class="string">" "</span> + a);  <span class="comment">// prints "Alice 20"</span></div></pre></td></tr></table></figure></p>
-<p>Build an object from array, and retrieves its array value by using     JSONArray.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String str = <span class="string">"&#123; \"number\": [3, 4, 5, 6] &#125;"</span>;</div><div class="line">JSONObject obj = <span class="keyword">new</span> JSONObject(str);</div><div class="line">JSONArray arr = obj.getJSONArray(<span class="string">"number"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length(); i++)</div><div class="line">    System.out.println(arr.getInt(i));</div></pre></td></tr></table></figure></p>
-<p>Input file organized like this.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"id"</span>: <span class="number">1</span>,</div><div class="line">  <span class="string">"firstname"</span>: <span class="string">"Katerina"</span>,</div><div class="line">  <span class="string">"languages"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="string">"lang"</span>: <span class="string">"en"</span>,</div><div class="line">      <span class="string">"knowledge"</span>: <span class="string">"proficient"</span></div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      <span class="string">"lang"</span>: <span class="string">"fr"</span>,</div><div class="line">      <span class="string">"knowledge"</span>: <span class="string">"advanced"</span></div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  <span class="string">"job"</span>: &#123;</div><div class="line">    <span class="string">"site"</span>: <span class="string">"www.javacodegeeks.com"</span>,</div><div class="line">    <span class="string">"name"</span>: <span class="string">"Java Code Geeks"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Decode String<br>Read file from the given file path, and then build JSONObject to get the value.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public static void main(Strig args)&#123;</div><div class="line">	String filePath = "....";</div><div class="line">	try&#123;</div><div class="line">		FileReader reader = new FileReader(filePath); //read a file</div><div class="line"></div><div class="line">		JSONParser jsonparser = new JSONParser();</div><div class="line">		JSONObject obj = (JSONObject) jsonParser.parse(reader); //need to cast</div><div class="line">		String firstName = (String)jsonObject.get("firstName);</div><div class="line">		long id = (long)jsonObject.get("id");</div><div class="line">		//then could use loop to get each language JSONObject in array</div><div class="line">		JSONArray lang = (JSONArray)jsonObject.get("languages"); </div><div class="line">		Iterator i = lang.iterator;</div><div class="line">		while (i.hasNext()) &#123;</div><div class="line">                JSONObject innerObj = (JSONObject) i.next();</div><div class="line">                System.out.println("language "+ innerObj.get("lang") +</div><div class="line">                        " with level " + innerObj.get("knowledge"));</div><div class="line">            &#125;</div><div class="line">            // handle a structure into the json object</div><div class="line">            JSONObject structure = (JSONObject) jsonObject.get("job");</div><div class="line">            System.out.println("Into job structure, name: " + structure.get("name"));</div><div class="line">	&#125;</div><div class="line">	catch (FileNotFoundException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125; catch (IOException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125; catch (ParseException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125; catch (NullPointerException ex) &#123;</div><div class="line">            ex.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>Encode into String</p>
-<pre><code class="Java"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>
-    </span>{
-        JSONObject obj = <span class="keyword">new</span> JSONObject();
+<p>Build an object form String, and retrieves by providing keys.</p>
+<script src="https://gist.github.com/monabest/f802735258f8f4a22a5e2c5a3f30e1bb.js"></script>
 
-        obj.put(<span class="string">"name"</span>,<span class="string">"foo"</span>);
-        obj.put(<span class="string">"num"</span>,<span class="keyword">new</span> Integer(<span class="number">100</span>));
-        obj.put(<span class="string">"balance"</span>,<span class="keyword">new</span> Double(<span class="number">1000.21</span>));
-        obj.put(<span class="string">"is_vip"</span>,<span class="keyword">new</span> Boolean(<span class="keyword">true</span>));
-
-        StringWriter out = <span class="keyword">new</span> StringWriter();
-        obj.writeJSONString(out);
-        String jsonText = out.toString();
-        System.out.print(jsonText);
-    }
-</code></pre>
 <p>Will show as {“balance”: 1000.21, “num”:100, “is_vip”:true, “name”:”foo”}</p>
 <p>Reference:<br><a href="http://theoryapp.com/parse-json-in-java/" target="_blank" rel="external">http://theoryapp.com/parse-json-in-java/</a><br><a href="https://examples.javacodegeeks.com/core-java/json/java-json-parser-example/" target="_blank" rel="external">https://examples.javacodegeeks.com/core-java/json/java-json-parser-example/</a><br><a href="http://wiki.jikexueyuan.com/project/json/with-java.html" target="_blank" rel="external">http://wiki.jikexueyuan.com/project/json/with-java.html</a></p>
 
