@@ -3,25 +3,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/02/05/Java-Read-and-Write-files/</loc>
-    <lastmod>2017-03-03T20:14:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Read and Write files</title>
-        <pubTime>2017-02-05T17:32:44.000Z</pubTime>
-        
-        <tag>Java Programming </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/02/13/What-happends-when-you-nevigate-to-a-URL/</loc>
-    <lastmod>2017-03-03T20:14:13.000Z</lastmod>
+    <lastmod>2017-03-03T20:20:54.000Z</lastmod>
     <data>
         <display>
         <title>What happends when you nevigate to a URL</title>
@@ -31,6 +14,9 @@
          
          
            
+             
+              <breadCrumb title="programming" url="http://yoursite.com/categories/programming/"/>
+          
         </display>
     </data>
     </url>
@@ -38,7 +24,7 @@
     
   <url>
     <loc>http://yoursite.com/2017/02/05/Reading-Effective-Java/</loc>
-    <lastmod>2017-03-03T20:13:54.000Z</lastmod>
+    <lastmod>2017-03-03T20:20:08.000Z</lastmod>
     <data>
         <display>
         <title>Reading -Effective Java</title>
@@ -55,11 +41,28 @@
     
   <url>
     <loc>http://yoursite.com/2017/02/04/JSON-used-in-Java/</loc>
-    <lastmod>2017-03-03T20:11:55.000Z</lastmod>
+    <lastmod>2017-03-03T20:19:31.000Z</lastmod>
     <data>
         <display>
         <title>JSON used in Java</title>
         <pubTime>2017-02-05T03:17:17.000Z</pubTime>
+        
+        <tag>Java Programming </tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/02/05/Java-Read-and-Write-files/</loc>
+    <lastmod>2017-03-03T20:14:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Read and Write files</title>
+        <pubTime>2017-02-05T17:32:44.000Z</pubTime>
         
         <tag>Java Programming </tag>
          
