@@ -12,16 +12,16 @@
   
 </title>
 
-<meta name="description" content="It’s pretty forgettable about the I/O in Java.For now list some common ways for reminder. TODO: go over the book.123456789101112131415161718192021222324252627282930313233/*reading a file by using stre">
+<meta name="description" content="It’s pretty forgettable about the I/O in Java.For now list some common ways for reminder.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Read and Write files">
 <meta property="og:url" content="http://yoursite.com/2017/02/05/Java-Read-and-Write-files/index.html">
 <meta property="og:site_name" content="MonaBest-Blogggyyy">
-<meta property="og:description" content="It’s pretty forgettable about the I/O in Java.For now list some common ways for reminder. TODO: go over the book.123456789101112131415161718192021222324252627282930313233/*reading a file by using stre">
-<meta property="og:updated_time" content="2017-02-05T18:10:14.000Z">
+<meta property="og:description" content="It’s pretty forgettable about the I/O in Java.For now list some common ways for reminder.">
+<meta property="og:updated_time" content="2017-03-03T20:14:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Read and Write files">
-<meta name="twitter:description" content="It’s pretty forgettable about the I/O in Java.For now list some common ways for reminder. TODO: go over the book.123456789101112131415161718192021222324252627282930313233/*reading a file by using stre">
+<meta name="twitter:description" content="It’s pretty forgettable about the I/O in Java.For now list some common ways for reminder.">
 
 
   <link rel="alternative" href="/atom.xml" title="MonaBest-Blogggyyy" type="application/atom+xml">
@@ -93,13 +93,6 @@
               </li>
             
           
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">Archive</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">4</span></li></ul>
-              </li>
-            
-          
         </ul>
       
         <ul class="nav">
@@ -123,6 +116,12 @@
             
               <li>
                 <a href="https://github.com/monabest" title="Github" target="_blank" rel="external">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://www.linkedin.com/in/monaqiu/" title="Linkedin" target="_blank" rel="external">Linkedin</a>
               </li>
             
           
@@ -159,7 +158,15 @@
 
   </div>
   <div class="article-entry">
-    <p>It’s pretty forgettable about the I/O in Java.<br>For now list some common ways for reminder. TODO: go over the book.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*reading a file by using stream I/O*/</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</div><div class="line">	String filePath = <span class="string">"..."</span>;</div><div class="line">	<span class="keyword">try</span>&#123;</div><div class="line">	<span class="comment">/*read the input text file*/</span></div><div class="line">	File file = <span class="keyword">new</span> File(filePath);</div><div class="line">	<span class="comment">/*build a input stream reader*/</span></div><div class="line">	InputStreamReader reader = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file));</div><div class="line">	BufferedReader br = <span class="keyword">new</span> BufferedReader(reader);</div><div class="line">	String line = <span class="string">""</span>;</div><div class="line">	line = br.readLine();</div><div class="line">	<span class="comment">/*read by line*/</span></div><div class="line">		<span class="keyword">while</span>(line != <span class="keyword">null</span>)&#123;</div><div class="line">			line = br.readLine();</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line">		<span class="comment">/*write text file*/</span></div><div class="line">	File writename = <span class="keyword">new</span> File(<span class="string">".\\result\\en\\output.txt"</span>); <span class="comment">//build a file if not already exits</span></div><div class="line">        writename.createNewFile(); <span class="comment">// create new file </span></div><div class="line">        BufferedWriter out = <span class="keyword">new</span> BufferedWriter(<span class="keyword">new</span> FileWriter(writename));  </div><div class="line">         </div><div class="line">        out.write(<span class="string">"i AM WRITING OUT\r\n"</span>); <span class="comment">// \r\n </span></div><div class="line">        out.flush(); <span class="comment">// put the buffered content into the file</span></div><div class="line">        out.close(); <span class="comment">// close the file at the end</span></div><div class="line">  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line">            e.printStackTrace();  </div><div class="line">        &#125;  </div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+    <p>It’s pretty forgettable about the I/O in Java.<br>For now list some common ways for reminder.<br><a id="more"></a></p>
+<p>From Intro to Java Programming Book</p>
+<script src="https://gist.github.com/monabest/f01d646bf1d2ec721fa06d283c6baae2.js"></script>
+
+<p>By default, the dilimiters in Scanner is white spaces.<br>Both method next() and nextLine() read a string. The next() method reads a string delimited by delimiters.<br>but nextLine() reads a line ending with a line separator. (\n on unix)<br>To get the line separator used by the system.<br>String lineSeparator = System.getProperty(“line.separator”);<br>If you enter input from a keyboad, a line ends with Enter key, which is  \n character.</p>
+<p>ToDo : Binary IO</p>
+<script src="https://gist.github.com/monabest/0099c708007d9ef020744b01e36745c1.js"></script>
+
+
 <p>Reference:<br><a href="http://blog.csdn.net/monkeyduck/article/details/11525771" target="_blank" rel="external">http://blog.csdn.net/monkeyduck/article/details/11525771</a><br><a href="http://www.cnblogs.com/0201zcr/p/5009975.html" target="_blank" rel="external">http://www.cnblogs.com/0201zcr/p/5009975.html</a><br><a href="http://blog.csdn.net/makeitperfect/article/details/9094613" target="_blank" rel="external">http://blog.csdn.net/makeitperfect/article/details/9094613</a></p>
 
   </div>
